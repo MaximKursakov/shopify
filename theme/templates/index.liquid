@@ -1,8 +1,16 @@
-<h2>Produkte</h2>
+<h1>Produkte</h1>
 
 {% for product in collections['frontpage'].products %}
     <div>
-        {{- product.title | link_to: product.url }}
+        <img src="{{product.featured_image | image_url}}" alt= "{{ product.title }}"/>
+        <div>
+            <div>
+            <h2>{{- product.title | link_to: product.url | upcase }}</h2>
+            <p>{{- product.description | link_to: product.url  | upcase }}<p>
+            </div>
+            <p>{{- product.price | link_to: product.url  | upcase }}<p>
+        </div>
+        <button> {{ 'IN DEN EINKAUFSWAGEN' | link_to: product.url | upcase }} </button>
     </div>
     
 {% endfor %}

@@ -2,6 +2,7 @@
     <head>
         {{ content_for_header}}
         {{"style.css" | asset-url | stylesheet_tag}}
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
         {% render 'header' %}
