@@ -1,0 +1,7 @@
+<header>
+    <h1> {{ 'V.SUN' | link_to: shop.url }} </h1>
+    {% for link in linklists.main-menu.links -%}
+        {{ link.title | link_to: link.url }}
+      {%- endfor %}
+</header>
+

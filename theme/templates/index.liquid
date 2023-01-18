@@ -1,0 +1,8 @@
+<h2>Produkte</h2>
+
+{% for product in collections['frontpage'].products %}
+    <div>
+        {{- product.title | link_to: product.url }}
+    </div>
+    
+{% endfor %}
