@@ -1,0 +1,7 @@
+<nav class="font-bold text-xl flex gap-6 justify-center mx-auto tracking-widest">
+    {% for link in linklists.main-menu.links -%}
+      <a href="{{link.url}}" {% if link.active %} class="border-b-2 border-gray-900 cursor-pointer" {% endif%}>
+        {{ link.title }} 
+    </a>
+    {%- endfor %}
+</nav>
